@@ -5,5 +5,8 @@ Description:    Child theme of Canvas for BMCC's CETLS.
 Author:         BMCC CETLS.
 Author URI:
 Template:       canvas
-Version:        0.1.0
+Version:        0.1.1
 */
+
+@import 'custom.css';
+* { color: black; }
