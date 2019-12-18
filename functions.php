@@ -49,8 +49,6 @@ function custom_archive_query( $query ){
 		return;
 	}
 
-	echo 'celts';
-
 	if ( is_archive() && (is_author() || is_category()) && empty( $query->query_vars['suppress_filters']) ) {
 		
 		$query->set( 'post_type', array(
