@@ -35,14 +35,31 @@ function create_post_type() {
     'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     'has_archive'         => true,
     'rewrite'             => array( 'slug' => 'projects' ),
-    'query_var'           => true
+    'query_var'           => true,
+    'taxonomies'		=> array('category')
     );
 
-  register_post_type( 'sm_project', $args );
+  register_post_type( 'cetls_project', $args );
 }
 add_action( 'init', 'create_post_type' );
 
+//Modify the main query    
+function custom_archive_query( $query ){
+	if ( is_admin() || !$query->is_main_query()) {
+		return;
+	}
 
+	echo 'celts';
+
+	if ( is_archive() && (is_author() || is_category()) && empty( $query->query_vars['suppress_filters']) ) {
+		
+		$query->set( 'post_type', array(
+			'post',
+			'cetls_project'
+		) );
+	}
+}
+add_action('pre_get_posts', 'custom_archive_query');
 
 function canvas_parent_theme_enqueue_styles() {
     wp_enqueue_style( 'canvas-style', get_template_directory_uri() . '/style.css' );

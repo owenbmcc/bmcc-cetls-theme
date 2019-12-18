@@ -1,0 +1,244 @@
+/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+.fig-container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-wrap: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: justify;
+}
+
+.item {
+	flex: auto;
+	box-sizing: border-box;
+	padding: 20px;
+	width: 29%;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border-top: 2px solid #0051BB;
+	text-align: left;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-shadow: 2px 2px 2px -2px #aaa;
+	border-radius: 4px;
+}
+
+.last {
+	border: 0;
+	box-shadow: none;
+}
+
+.item h2 {
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.item p {
+	margin-bottom: 5px;
+	font-size: 15px;
+	line-height: 19px;
+}
+
+.header-wrapper {
+	background-color: #0051BB;
+	color: #fff;
+	padding: 10px 10px 5px;
+}
+
+.head-flex {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+}
+
+.head-item2 {
+	text-align: right;
+	font-size: 14px;
+	line-height: 20px;
+	padding-top: 7px;
+}
+
+.head-item2 img {
+	width: 55px;
+}
+
+.page-id-2  .entry-title {
+	display: none;
+}
+
+.entry table thead th {
+	padding: .8em 1em;
+	background-color: #f2f4f5;
+}
+
+.entry table td {
+	padding: .8em 1em;
+}
+
+@media only screen and (max-width: 768px) {
+	.head-item2 {
+		display: none;
+	}
+	
+	.head-flex {
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.fig-container {
+		display: block;
+	}
+	
+	.item {
+		width: 100%;
+	}
+}
+
+.date-as-calendar {
+	font-variant: normal;
+	font-style: normal;
+	font-weight: normal;
+/* It seems vertical-align: baseline does not work correctly with display: inline-flex. */
+	vertical-align: top;
+/* margin: 1ex; */
+	color: black;
+	background: white;
+	border: 1px solid #a6a6a6;
+	overflow: hidden;
+/* margin-right: 10px; */
+	float: left;
+}
+
+.textwidget .date-as-calendar {
+	margin-right: 10px;
+}
+
+.date-as-calendar .weekday,.date-as-calendar .day,.date-as-calendar .month,.date-as-calendar .year {
+	text-align: center;
+	line-height: 1;
+}
+
+.date-as-calendar .month {
+	text-transform: uppercase;
+	background: #a6a6a6;
+}
+
+.page-id-200 .title {
+	display: none;
+}
+
+/****************************************/
+/* Layout rules using position: absolute and pixels. */
+.position-pixels.date-as-calendar {
+	display: inline-block;
+	position: relative;
+	width: 74px;
+	height: 74px;
+	margin-top: 5px;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.position-pixels.date-as-calendar .weekday,.position-pixels.date-as-calendar .day,.position-pixels.date-as-calendar .month,.position-pixels.date-as-calendar .year {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 1em;
+}
+
+.position-pixels.date-as-calendar .month {
+	top: 0;
+	font-size: 15px;
+	padding: 5px 0;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	color: #fff;
+}
+
+.position-pixels.date-as-calendar .weekday {
+	top: 17px;
+	font-size: 10px;
+}
+
+.position-pixels.date-as-calendar .day {
+	top: 30px;
+	font-size: 37px;
+	color: #353535;
+}
+
+.position-pixels.date-as-calendar .year {
+	top: 50px;
+	font-size: 14px;
+}
+
+.textwidget p {
+	margin-bottom: 2px;
+}
+
+.css-events-list table.events-table td {
+	padding: .5em;
+}
+
+.events-table td:first-child {
+	text-align: center;
+}
+
+/* no border home page img */
+.entry img {
+	border: none;
+	padding: 0;
+}
+
+/* themes temp styles */
+ul.lcp_catlist {
+	list-style: none;
+	padding: 0;
+}
+
+/* blog list test style */
+ul.blog-list {
+	margin: 0;
+	padding: 0;
+	list-style: none !important;
+}
+
+ul.blog-list .cattitle {
+}
+
+ul.blog-list .author::before {
+	content: "by ";
+}
+
+ul.blog-list img {
+	float: left;
+	margin-right: 1em;
+}
+
+ul.blog-list .excerpt {
+	margin: 1em;
+	vertical-align: top;
+}
+
+/* front page test */
+#layout {
+/* 	display: grid; */
+/* 	grid-template-columns: 50% 50%; */
+}
+
+.layout-column {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
